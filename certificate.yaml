@@ -8,15 +8,15 @@ spec:
   issuerRef:
     name: foobar-faucet-issuer
     kind: ClusterIssuer
-  commonName: foobar.protonchain.com
+  commonName: foobar-faucet-ng5iqqpaa-chanhyeok-in.vercel.app
   dnsNames:
-  - foobar.protonchain.com
+  - foobar-faucet-ng5iqqpaa-chanhyeok-in.vercel.app
   acme:
     config:
     - http01:
         ingress: foobar-faucet-ssl-ingress
       domains:
-      - foobar.protonchain.com
+      - foobar-faucet-ng5iqqpaa-chanhyeok-in.vercel.app
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
