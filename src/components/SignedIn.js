@@ -28,14 +28,10 @@ const SignedIn = ({ accountData, logout }) => {
     setSuccessMessage('');
     setButtonText('Sending tokens...');
     e.preventDefault();
-    window.grecaptcha.ready(() => {
-      window.grecaptcha
-        .execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit' })
-        .then((token) => {
-          return window.fetch(
+    window.fetch(
             `/api/get_tokens?token=${token}&account=${accountData.acc}`
-          );
-        })
+          )
+      
         .then((response) => response.json())
         .then((result) => {
           if (result.error) {
@@ -61,7 +57,7 @@ const SignedIn = ({ accountData, logout }) => {
             setErrorMessage(`Internal Service Error: Please try again later.`);
           }
         });
-    });
+    
   };
 
   return (
