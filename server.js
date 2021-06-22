@@ -38,7 +38,7 @@ app.get('/api/get_tokens', async (req, res) => {
 
       for (let i = 0; i < recentActionsResponse.actions.length; i++) {
         const currentAction = recentActionsResponse.actions[i];
-        if (currentAction.act.data.from === 'foobar') {
+        if (currentAction.act.data.from === 'inch13') {
             res.status(500).send({
               code: 500,
               message: 'Limit Exceeded',
@@ -59,14 +59,14 @@ app.get('/api/get_tokens', async (req, res) => {
           account: 'xtokens',
           name: 'transfer',
           authorization: [{
-            actor: 'foobar',
+            actor: 'inch13',
             permission: 'active',
           }],
           data: {
-            from: 'foobar',
+            from: 'inch13',
             to: req.query.account,
-            quantity: '2000.000000 FOOBAR',
-            memo: 'Foobar Faucet',
+            quantity: '1 ICH',
+            memo: 'ICH Faucet',
           },
         }]
       }, {
