@@ -73,14 +73,14 @@ In `server.js` modifications are necessary so that the account sending the token
       account: 'xtokens', // usually this will be 'eosio.token' unless sending a wrapped token
       name: 'transfer',
       authorization: [{
-        actor: 'foobar', // replace
+        actor: 'inch13', // replace
         permission: 'active',
       }],
       data: {
-        from: 'foobar',  // replace
+        from: 'inch13',  // replace
         to: req.query.account,
-        quantity: '2000.000000 FOOBAR', // update token
-        memo: 'Foobar Faucet',
+        quantity: '1 ICH', // update token
+        memo: 'ICH Faucet',
       },
     }]
   }, {

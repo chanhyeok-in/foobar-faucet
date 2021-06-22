@@ -6,8 +6,8 @@ class ProtonSDK {
     this.chainId =
       '384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0';
     this.endpoints = ['https://proton.greymass.com']; // Multiple for fault tolerance
-    this.appName = 'Foobar';
-    this.requestAccount = 'foobar'; // optional
+    this.appName = 'ICH';
+    this.requestAccount = 'inch13'; // optional
     this.session = null;
     this.link = null;
   }
