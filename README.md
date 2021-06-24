@@ -86,5 +86,5 @@ In `server.js` modifications are necessary so that the account sending the token
   }, {
     blocksBehind: 3,
     expireSeconds: 30,
-  });
+  }); 
 ```
